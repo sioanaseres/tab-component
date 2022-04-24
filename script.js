@@ -4,12 +4,17 @@
 const btn = document.querySelector(".footer-CTA");
 
 let url = new URL(btn.href);
+
 const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
 
-url.search = urlParams.toString();
+const urlParams = new URLSearchParams(queryString).toString();
+console.log(urlParams)
 
-btn.href = url.toString();
+btn.href = `${url}?${urlParams}`
+// url.search = urlParams.toString();
+
+// btn.href = url.toString();
+console.log(btn.href)
 
 //tabs
 
@@ -37,34 +42,3 @@ tabContainer.addEventListener("click", function(e){
 
 })
 
-
-//    //api
-
-// const update = {
-//   title:"test",
-//   body:"content info",
-//   userId:1,
-// }
-
-// const options = {
-//   method:"POST",
-//   headers:{
-//     'Content-Type': 'application/json',
-//   }, 
-//   body: JSON.stringify(update),
-// }
-
-// fetch('https://statistics.postclickinternal.com/api/fetest', options)
-//   .then(data => {
-//     if(!data.ok){
-//       throw Error(data.status)
-//     }
-//     return data.json();
-//   }).then(update =>{
-//     console.log(update)
-//   }).catch(e =>{
-//     console.log(e)
-//   });
-
-
-// document.getElementById("contact-form").submit();
