@@ -30,7 +30,7 @@ nav a{color: white; text-decoration: none;}
 .legend{display: none;}
 .fieldset{border: none; display: flex; align-items: flex-start; justify-content:space-between; flex-direction: column; padding: 1rem 2rem 2rem; }
 .fieldset label{display: block;}
-.fieldset input{margin-bottom: 2rem; border-radius: 0.3rem; outline: none; width: 100%;}
+.fieldset input{margin-bottom: 2rem; border-radius: 0.3rem; outline: none; width: 100%; color: black;}
 .CTA{background: rgb(82, 87, 198); color: white; padding: 0.5rem ; font-weight: bold; width: 100%;}
 
 
@@ -70,7 +70,7 @@ nav a{color: white; text-decoration: none;}
 
 .footer{display: flex; align-items: center; justify-content: center; color: white; background: black ; flex-direction: column;}
 .footer-text-first{color: rgb(76, 161, 249); text-transform: uppercase; font-size: 0.8rem;  }
-.footer-title{font-size: 2rem; text-align: center;}
+.footer-title{font-size: 2rem; text-align: center; line-height: 3rem;}
 .footer-text{text-align: center; padding: 1rem; width: 50%;
 }
 .footer-CTA{width:50%; text-align: center; text-decoration: none;

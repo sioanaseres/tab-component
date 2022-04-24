@@ -15,6 +15,9 @@
      <nav>
        <a href="#"><span class="highlighted">Brand</span>Name</a>
      </nav>
+    </header>
+    <main>
+    <section >
      <div class="hero">
        <div class="hero-text">
          <p class="hero-text-paragraph">Demo Request</p>
@@ -27,29 +30,29 @@
        </div>
        <div class="hero-form">
         <h2 class="form-title">Call to action</h2>
-        <form  class="form" action="#" method="post">
+        <form  class="form"  method="post" id="contact-form" action="https://statistics.postclickinternal.com/api/fetest">
           <fieldset class="fieldset">
               <legend class="legend">Call to action</legend>      
               <label for="name" >Name</label>
-              <input type="text" id="name">
-           
+              <input type="text" name="name" required >
               <label for="email" >Email  </label>
-                <input type="text" id="email">
+                <input type="email" name="email" required>
               
               <button class="CTA" type="submit">Call to action</button>
         </fieldset>
       </form>
+   
        </div>
      </div>
-   </header>
-
-   <main>
+  
+    </section>
+  
      <section class="tab-blocks">
        <div class="tabs">
          <h2 class="tabs-title">Tabbed blocks</h2>
         <p class="tabs-paragraph">When you click on any of the text below, display a different block underneath and change the color of the current active tab</p>
         <div class="tabs-container">
-          <h2 class="tab " data-tab="1">Tab 1</h2>
+          <h2 class="tab selected" data-tab="1">Tab 1</h2>
           <h2 class="tab" data-tab="2">Tab 2</h2>
           <h2 class="tab" data-tab="3">Tab 3</h2>
         </div>
@@ -146,6 +149,8 @@
       <a href="#"><span class="highlighted">Brand</span>Name</a>
       <p class="copy-text">Copyright&copy; 2022. All rights reserved.</p>
      </div>
+
+  
    </footer>
     
 

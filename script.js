@@ -1,3 +1,16 @@
+
+//url change
+
+const btn = document.querySelector(".footer-CTA");
+
+let url = new URL(btn.href);
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+url.search = urlParams.toString();
+
+btn.href = url.toString();
+
 //tabs
 
 const tabContainer = document.querySelector(".tabs-container");
@@ -8,8 +21,7 @@ const tab3 = document.querySelector(".tab-3");
 
 tabContainer.addEventListener("click", function(e){
   const clicked = e.target.closest(".tab");
-  console.log(clicked);
-
+ 
   //Remove active classes
   tabs.forEach(t => t.classList.remove("selected"));
  tab1.classList.remove("active");
@@ -24,58 +36,35 @@ tabContainer.addEventListener("click", function(e){
 
 
 })
-//url
-
-// const btn = document.querySelector(".footer-CTA");
-
-// let url = new URL(btn.href);
-// let params = new URLSearchParams;
-
-// params.append('test1', 4);
-// params.append('test2', 5);
-// url.search = params.toString();
-
-// btn.href = url.toString();
-
-
-// console.log(btn.href);
-// console.log(btn.href);
-
-// // let url = new URL('https://example.com?foo=1&bar=2');
 
 
 //    //api
-//    let data = {
-//   title: "foo",
-//   body: "bar", 
-//   userId:1234
+
+// const update = {
+//   title:"test",
+//   body:"content info",
+//   userId:1,
 // }
 
-// fetch('https://statistics.postclickinternal.com/api/fetest', {
-//   method: "POST",
-//   body: JSON.stringify(data),
-//   headers: {"Content-type": "application/json; charset=UTF-8"}
-// })
-// .then(response => response.json()) 
-// .then(json => console.log(json))
-// .catch(err => console.log(err));
-
-// // Example POST method implementation:
-// async function postData(url = '', data = {}) {
-
-//   const response = await fetch(url, {
-//     method: 'POST', 
-//     headers: {
-//       'Content-Type': 'application/json'
-    
-//     },
-
-//     body: JSON.stringify(data) 
-//   });
-//   return response.json(); 
+// const options = {
+//   method:"POST",
+//   headers:{
+//     'Content-Type': 'application/json',
+//   }, 
+//   body: JSON.stringify(update),
 // }
 
-// postData('https://reqres.in/api/products/3', { answer: 42 })
+// fetch('https://statistics.postclickinternal.com/api/fetest', options)
 //   .then(data => {
-//     console.log(data); 
+//     if(!data.ok){
+//       throw Error(data.status)
+//     }
+//     return data.json();
+//   }).then(update =>{
+//     console.log(update)
+//   }).catch(e =>{
+//     console.log(e)
 //   });
+
+
+// document.getElementById("contact-form").submit();
