@@ -6,14 +6,11 @@ const btn = document.querySelector(".footer-CTA");
 let url = new URL(btn.href);
 
 const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
 
-const urlParams = new URLSearchParams(queryString).toString();
-console.log(urlParams)
-
-btn.href = `${url}?${urlParams}`
-// url.search = urlParams.toString();
-
-// btn.href = url.toString();
+url.search = urlParams.toString();
+console.log(url)
+btn.href = url.href.toString();
 console.log(btn.href)
 
 //tabs
