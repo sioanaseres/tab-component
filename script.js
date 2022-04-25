@@ -4,16 +4,23 @@
 const btn = document.querySelector(".footer-CTA");
 
 let url = new URL(btn.href);
+url.href = document.location.href;
+btn.href = url.href;
+console.log(url);
+console.log(btn.href)
 
 // const queryString = document.location.search;
 // const urlParams = new URLSearchParams(queryString);
-let params = (new URL(document.location)).searchParams;
+// let params = (new URL(document.location)).searchParams;
 
-url.search = params.toString();
+// url.search = params.toString();
+// let params = new URLSearchParams();
 
-console.log(url)
-btn.href = url.href;
-console.log(btn.href)
+// params.set(url.search);
+// params.toString();
+
+// btn.href = url.href;
+// console.log(btn.href)
 
 //tabs
 
